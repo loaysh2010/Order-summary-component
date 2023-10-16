@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif; 
+    font-size: 16px;
+    background-color: hsl(225, 100%, 94%); /* Set your desired background color here */
+    background-image: url('../imgs/pattern-background-desktop.svg'); /* Set the path to your background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.order-summary{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width:446px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+@media (max-width:767px){
+    .order-summary{
+        width:300px;
+    }
+}
+
+.order-summary>img{
+    max-width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.order-summary h1 {
+    margin: 40px 0 20px;
+}
+
+.order-summary p {
+    width:80%;
+    color:hsl(224, 23%, 55%) ;
+}
+
+.order-summary .price-plane{
+    display: flex;
+    background-color: hsl(225, 100%, 98%);
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    width:80%;
+    margin: 30px 0;
+    justify-content: space-between;
+}
+@media (max-width:767px){
+    .order-summary .price-plane{
+        padding: 10px;
+        justify-content: center;
+    }
+    .order-summary .price-plane .price {
+        margin-left:10px ;
+    }
+    .order-summary .price-plane .left{
+        margin-right: 10px;
+    }
+}
+.order-summary .price-plane .left {
+    display: flex;
+    align-items: center;
+}
+.order-summary .price-plane .price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+.order-summary .price-plane .price span:first-child{
+    font-weight: 700;
+}
+.order-summary .price-plane .price span:last-child{
+    color: hsl(224, 23%, 55%);
+}
+
+.order-summary .price-plane a {
+    text-decoration: none;
+    color: #382AE1;
+    text-decoration: underline;
+    font-weight: 700;
+}
+.order-summary .price-plane a:hover{
+    text-decoration: none;
+    color: #766CF1;
+}
+
+.order-summary button {
+    cursor: pointer;
+    width: 80%;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #382AE1;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+}
+.order-summary button:hover{
+    background-color:#766CF1 ;
+}
+
+.order-summary>span{
+    display: block;
+    margin: 20px 0;
+    font-weight: 700;
+    color: #787D89;
+    cursor: pointer;
+}
+.order-summary>span:hover {
+    color:black
+}
